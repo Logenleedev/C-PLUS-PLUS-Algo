@@ -3,7 +3,7 @@
 using namespace std; 
   
 
-int binarySearch(int arr[], int l, int r, int target) {
+int BinarySearch(int arr[], int l, int r, int target) {
 
     if (r >= l){
         int mid = (l+r)/2;
@@ -13,10 +13,10 @@ int binarySearch(int arr[], int l, int r, int target) {
         } else {
             if (arr[mid] < target) {
                 l = mid;
-                return binarySearch(arr, l, r, target);
+                return BinarySearch(arr, l, r, target);
             } else {
                 r = mid;
-                return binarySearch(arr, l, r, target);
+                return BinarySearch(arr, l, r, target);
             }
         }
     }
@@ -40,7 +40,7 @@ int main()
     cout << "Please enter your search target: \n";
     cin >> target;
 
-    int result = binarySearch( myArray, 0, 7, target);
+    int result = BinarySearch( myArray, 0, 7, target);
     
     cout << "The index of the target element is: " << result << endl;
 
