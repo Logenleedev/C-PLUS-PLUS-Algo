@@ -3,7 +3,7 @@
 using namespace std; 
   
 
-void InsertionSort(int *array, int size, int target) {
+void InsertionSort(int *array, int size) {
     for ( int i = 0; i < size; i++ ) {
         int j = i - 1;
         int key = array[i];
@@ -21,7 +21,7 @@ void InsertionSort(int *array, int size, int target) {
   
 int main() 
 { 
-    int size, n, target;
+    int size, n;
     
     cout << "Enter the size of the array: \n";
     cin >> size;
@@ -34,7 +34,7 @@ int main()
 
     cout << "The resulting array is: " << endl;
 
-    InsertionSort( myArray, size, target);
+    InsertionSort( myArray, size);
     
 
 
